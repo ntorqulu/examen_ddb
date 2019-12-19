@@ -1,0 +1,35 @@
+C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/portes_logiques.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/portes_logiques.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity inv
+-- Compiling architecture logicaretard of inv
+-- Compiling entity and2
+-- Compiling architecture logicaretard of and2
+-- Compiling entity or2
+-- Compiling architecture logicaretard of or2
+
+} {} {}} C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/biestables.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/biestables.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity D_Latch_PreClr
+-- Compiling architecture ifthen of D_Latch_PreClr
+-- Compiling entity JK_Pujada_PreClr
+-- Compiling architecture ifthen of JK_Pujada_PreClr
+
+} {} {}} C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/circuit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/circuit.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity circuit
+-- Compiling architecture estructural of circuit
+-- Loading entity D_Latch_PreClr
+-- Loading entity JK_Pujada_PreClr
+-- Loading entity inv
+-- Loading entity and2
+-- Loading entity or2
+-- Compiling entity Banc_D_P
+-- Compiling architecture test of Banc_D_P
+-- Loading entity circuit
+-- Compiling entity bdp_biestables
+-- Compiling architecture test of bdp_biestables
+
+} {} {}}

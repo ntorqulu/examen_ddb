@@ -1,0 +1,109 @@
+ENTITY circuit IS
+	PORT(x, Ck:IN BIT; z, cron_Q1, cron_NO_Q1, cron_J, cron_K:OUT BIT);
+END circuit;
+
+ARCHITECTURE estructural OF circuit IS
+
+COMPONENT comp_D_Latch_PreClr IS
+	PORT(D, Clk, Pre, Clr:IN BIT; Q, NO_Q:OUT BIT);
+END COMPONENT;
+
+COMPONENT comp_JK_Pujada_PreClr IS
+	PORT(J, K, Clk, Pre, Clr:IN BIT; Q, NO_Q:OUT BIT);
+END COMPONENT;
+
+COMPONENT porta_inv IS
+	PORT(a: IN BIT; z:OUT BIT);
+END COMPONENT;
+
+COMPONENT porta_and2 IS
+	PORT(a, b: IN BIT; z:OUT BIT);
+END COMPONENT;
+
+COMPONENT porta_or2 IS
+	PORT(a, b: IN BIT; z:OUT BIT);
+END COMPONENT;
+
+-- associem els compoents a les seves definicions i arquitectures
+FOR DUT1: comp_D_Latch_PreClr USE ENTITY work.D_Latch_PreClr(ifthen);
+FOR DUT2: comp_JK_Pujada_PreClr USE ENTITY work.JK_Pujada_PreClr(ifthen);
+FOR DUT3: porta_inv USE ENTITY work.inv(logicaretard);
+FOR DUT4: porta_and2 USE ENTITY work.and2(logicaretard);
+FOR DUT5: porta_or2 USE ENTITY work.or2(logicaretard);
+
+-- senyals internes
+SIGNAL constPre, constClr:BIT;
+SIGNAL Q1, NO_Q1, invx, result_and, result_or:BIT;
+
+BEGIN
+--com que a l'enunciat no s'ens mostren les entrades del preset ni del clear
+--i l'enunciat no especifica aquestes entrades, suposarem que estan sempre desactivades
+	constPre <= '0';
+	constClr <= '0';
+	DUT1: comp_D_Latch_PreClr PORT MAP(x, Ck, constPre, constClr, Q1, NO_Q1);
+	--podem ignorar la sortida NO_Q2 de JK perquè no ens la demanen
+	DUT2: comp_JK_Pujada_PreClr PORT MAP(result_and, result_or, Ck, constPre, constClr, z);
+	DUT3: porta_inv PORT MAP(x, invx);
+	DUT4: porta_and2 PORT MAP(x, Q1, result_and);
+	DUT5: porta_or2 PORT MAP(NO_Q1,invx, result_or);
+	cron_Q1 <= Q1;
+	cron_NO_Q1 <= NO_Q1;
+	cron_J <=result_and;
+	cron_K <= result_or;
+END estructural;
+
+
+
+--Banc de proves del circuit, només mostra variables Ck i x
+ENTITY Banc_D_P IS
+END Banc_D_P;
+
+ARCHITECTURE test OF Banc_D_P IS
+
+COMPONENT comp_circuit IS
+	PORT(x, Ck:IN BIT; z, cron_Q1, cron_NO_Q1, cron_J, cron_K:OUT BIT);
+END COMPONENT;
+
+SIGNAL Ck, x, Q1, NO_Q1, J, K, z:BIT;
+FOR DUT1: comp_circuit USE ENTITY work.circuit(estructural);
+
+BEGIN
+	DUT1: comp_circuit PORT MAP(x, Ck, z, Q1, NO_Q1, J, K);
+PROCESS(x, Ck)
+BEGIN
+Ck <= NOT Ck AFTER 50 ns;
+x <= NOT x AFTER 100 ns;
+END PROCESS;
+END test;
+
+-- Banc de proves per als biestables
+ENTITY bdp_biestables IS
+END bdp_biestables;
+
+ARCHITECTURE test OF bdp_biestables IS
+
+COMPONENT mi_D_Latch_PreClr IS
+	PORT(D, Clk, Pre, Clr:IN BIT; Q, NO_Q:OUT BIT);
+END COMPONENT;
+
+COMPONENT mi_JK_Pujada_PreClr IS
+	PORT(J, K, Clk, Pre, Clr:IN BIT; Q, NO_Q:OUT BIT);
+END COMPONENT;
+
+SIGNAL entD_J, entK, clock, preset, clear, Dsort_Q, Dsort_noQ, JKsort_Q, JKsort_noQ:BIT;
+FOR DUT1: mi_D_Latch_PreClr USE ENTITY WORK.D_Latch_PreClr(ifthen);
+FOR DUT2: mi_JK_Pujada_PreClr USE ENTITY WORK.JK_Pujada_PreClr(ifthen);
+BEGIN
+	DUT1:mi_D_Latch_PreClr PORT MAP(entD_J, clock, preset, clear, Dsort_Q, Dsort_noQ);
+	DUT2:mi_JK_Pujada_PreClr PORT MAP(entD_J, entk, clock, preset, clear, JKsort_Q, JKsort_noQ);
+
+PROCESS(entD_J, entK, clock, preset, clear)
+BEGIN
+entD_J<=NOT entD_J AFTER 800 ns;
+entK<= NOT entK AFTER 400 ns;
+clock<= NOT clock AFTER 500 ns;
+preset<= '0', '1' AFTER 600 ns;
+clear<= '1', '0' AFTER 200 ns;
+END PROCESS;
+END test;
+

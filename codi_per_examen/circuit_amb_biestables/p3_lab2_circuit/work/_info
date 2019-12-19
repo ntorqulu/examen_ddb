@@ -1,0 +1,298 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+Eand2
+Z0 w1574700894
+Z1 dC:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit
+Z2 8C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/portes_logiques.vhd
+Z3 FC:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/portes_logiques.vhd
+l0
+L14
+VJgP;FnUXGWDH[zFY1KDP92
+!s100 NlSG9bo[fSbL=[dI[hIE=2
+Z4 OP;C;10.4a;61
+32
+Z5 !s110 1574700897
+!i10b 1
+Z6 !s108 1574700897.000000
+Z7 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/portes_logiques.vhd|
+Z8 !s107 C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/portes_logiques.vhd|
+!i113 1
+Z9 o-work work -2002 -explicit -O0
+Z10 tExplicit 1
+Alogicaretard
+Z11 DEx4 work 4 and2 0 22 JgP;FnUXGWDH[zFY1KDP92
+l19
+L18
+VoP;JzN0[o?AcJKDSlabzG3
+!s100 R=KkbJ@E93>20PTW]Q@7A2
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Ebanc_d_p
+Z12 w1574701517
+R1
+Z13 8C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/circuit.vhd
+Z14 FC:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/circuit.vhd
+l0
+L58
+Vj@WSchn:dem6Q?`?@1=kh2
+!s100 <DJ1:m]IDo`aGWHjgCkGH1
+R4
+32
+Z15 !s110 1574701521
+!i10b 1
+Z16 !s108 1574701521.000000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/circuit.vhd|
+Z18 !s107 C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/circuit.vhd|
+!i113 1
+R9
+R10
+Atest
+Z19 DEx4 work 7 circuit 0 22 hn=OmTaK5Y;6MZZ9zUZ4Q0
+Z20 DEx4 work 8 banc_d_p 0 22 j@WSchn:dem6Q?`?@1=kh2
+l70
+L61
+Z21 VRWE9Xe`g4gVgFISZ;eY152
+Z22 !s100 NkO36mbJ6<UY6gLA:mEzX1
+R4
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R9
+R10
+Ebdp_biestables
+R12
+R1
+R13
+R14
+l0
+L80
+V]VK9e<@cWCj^QDRgFS<IB2
+!s100 :8SkB[HbU1kmP9YNm0N872
+R4
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R9
+R10
+Atest
+Z23 DEx4 work 16 jk_pujada_preclr 0 22 iC[0>cPJNd^[l>e5@nl5e2
+Z24 DEx4 work 14 d_latch_preclr 0 22 F8k;bQIYEXzEmbTJEZHWF2
+Z25 DEx4 work 14 bdp_biestables 0 22 ]VK9e<@cWCj^QDRgFS<IB2
+l96
+L83
+VTFfNS=TeIjlJK=^:<c_S_1
+!s100 33DFmJ4AcHZZlD]b<V[UX2
+R4
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R9
+R10
+Ecircuit
+R12
+R1
+R13
+R14
+l0
+L1
+Vhn=OmTaK5Y;6MZZ9zUZ4Q0
+!s100 CS6@^g3X]2Fe4kmK6EJZa3
+R4
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R9
+R10
+Aestructural
+Z26 DEx4 work 3 or2 0 22 ^@BjbZWeFjmCBmOUX`E_60
+R11
+Z27 DEx4 work 3 inv 0 22 @aEbnkoh_71nI2Y>B`c041
+R23
+R24
+R19
+l38
+L5
+Z28 Ve6in`95LPfEMkCQ74lH@G1
+Z29 !s100 oI::z=nEH53g58za:6f[`2
+R4
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R9
+R10
+Ed_latch_preclr
+Z30 w1574697554
+R1
+Z31 8C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/biestables.vhd
+Z32 FC:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/biestables.vhd
+l0
+L3
+VF8k;bQIYEXzEmbTJEZHWF2
+!s100 [ET5ME^`]34iMBk1ZR;8T2
+R4
+32
+Z33 !s110 1574697558
+!i10b 1
+Z34 !s108 1574697558.000000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/biestables.vhd|
+Z36 !s107 C:/Users/akira/Documents/PractiquesDDB/p3_lab2_circuit/biestables.vhd|
+!i113 1
+R9
+R10
+Aifthen
+R24
+l9
+L7
+V:=I;n_X[::6?9DHQ>nN:`1
+!s100 jM:K49PiE1Zlg=d4;:1HF3
+R4
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R9
+R10
+Einv
+R0
+R1
+R2
+R3
+l0
+L3
+V@aEbnkoh_71nI2Y>B`c041
+!s100 jkO=:UJ51n_TLOQ4`01jL3
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Alogicaretard
+R27
+l8
+L7
+VDHzoQeheAfoDjTKm0In9z3
+!s100 H6=1S`N06LNMd5LVW^U_o2
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Ejk_pujada_preclr
+R30
+R1
+R31
+R32
+l0
+L31
+ViC[0>cPJNd^[l>e5@nl5e2
+!s100 0;ObnHeW^o^BVCRA_a5kQ0
+R4
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R9
+R10
+Aifthen
+R23
+l37
+L35
+VBCaFjMJkmPnzzRmh=ZMLQ3
+!s100 4YjNn94W6LIT8@nfXHz^B0
+R4
+32
+R33
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R9
+R10
+Eor2
+R0
+R1
+R2
+R3
+l0
+L24
+V^@BjbZWeFjmCBmOUX`E_60
+!s100 8KKVCGJc@QTgXJMLXoUQK3
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Alogicaretard
+R26
+l29
+L28
+VV_VFoAhQgbnOJCb6G730O2
+!s100 D_XBVMCmC[_CPXocRV1Ho3
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10

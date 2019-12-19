@@ -1,0 +1,32 @@
+C:/Users/akira/Desktop/codi_per_examen/circuit_biestables_2/registe.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/akira/Desktop/codi_per_examen/circuit_biestables_2/registe.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity and2
+-- Compiling entity nand3
+-- Compiling entity or2
+-- Compiling entity inv
+-- Compiling architecture logica_retard of and2
+-- Compiling architecture logica_retard of nand3
+-- Compiling architecture logica_retard of or2
+-- Compiling architecture logica_retard of inv
+-- Compiling entity mux2a1
+-- Compiling architecture ifthen of mux2a1
+-- Compiling architecture logica_retard of mux2a1
+-- Loading entity mux2a1
+-- Compiling architecture estructural of mux2a1
+-- Loading entity mux2a1
+-- Loading entity and2
+-- Loading entity inv
+-- Loading entity or2
+-- Compiling entity FF_T
+-- Compiling architecture ifthen of FF_T
+-- Compiling entity circuit
+-- Compiling architecture estructural of circuit
+-- Loading entity mux2a1
+-- Loading entity FF_T
+-- Loading entity nand3
+-- Compiling entity bdp
+-- Compiling architecture test of bdp
+-- Loading entity circuit
+
+} {} {}}

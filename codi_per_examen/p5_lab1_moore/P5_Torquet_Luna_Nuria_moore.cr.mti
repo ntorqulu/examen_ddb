@@ -1,0 +1,19 @@
+C:/Users/akira/Documents/PractiquesDDB/p5_lab1_moore/Torquet_Luna_Nuria_circuit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/akira/Documents/PractiquesDDB/p5_lab1_moore/Torquet_Luna_Nuria_circuit.vhd
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Compiling entity and2
+-- Compiling architecture logicaretard of and2
+-- Compiling entity xnor2
+-- Compiling architecture logicaretard of xnor2
+-- Compiling entity FF_JK_up
+-- Compiling architecture ifthen of FF_JK_up
+-- Compiling entity circuit
+-- Compiling architecture estructural of circuit
+-- Loading entity xnor2
+-- Loading entity and2
+-- Loading entity FF_JK_up
+-- Compiling entity bdp
+-- Compiling architecture test of bdp
+-- Loading entity circuit
+
+} {} {}}
